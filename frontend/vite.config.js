@@ -8,5 +8,9 @@ export default defineConfig({
       "/api": "http://127.0.0.1:3000",
     },
   },
+
   plugins: [react()],
+  build: {
+    outDir: "dist",
+  },
 });
