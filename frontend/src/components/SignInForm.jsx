@@ -51,10 +51,11 @@ export default function SignInForm() {
     }
   }
 
-  async function guestLogin(e) {
+  async function guestLogin() {
     setEmail("diwakardayal65@gmail.com");
     setPassword("diwakar");
-    await handleLogin(e);
+
+    toast.success("You can login now");
   }
 
   return (
@@ -90,6 +91,7 @@ export default function SignInForm() {
                 block
                 className="mt-3"
                 onClick={guestLogin}
+                type="button"
               >
                 Use Guest Credentials
               </Button>
