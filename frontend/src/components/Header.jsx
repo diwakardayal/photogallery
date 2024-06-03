@@ -16,9 +16,14 @@ export default function Header() {
             </Link>
 
             {user ? (
-              <Button variant="outline-danger" onClick={handleLogout}>
-                Logout
-              </Button>
+              <div style={{ display: "flex", gap: "1rem" }}>
+                <Link to="/admin">
+                  <Button>Upload image</Button>
+                </Link>
+                <Button variant="outline-danger" onClick={handleLogout}>
+                  Logout
+                </Button>
+              </div>
             ) : (
               <Link to="/login" style={{ textDecoration: "none" }}>
                 <Button variant="outline-primary">Login</Button>
